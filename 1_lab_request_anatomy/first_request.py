@@ -6,7 +6,8 @@ from anthropic.types.message_create_params import MessageCreateParams
 
 # Everything below this line is ordinary Claude API code.
 from dotenv import load_dotenv
-from shopassist_lab import check
+
+from shared.shopassist_lab import check
 
 load_dotenv()
 # No key in the code: the client reads ANTHROPIC_API_KEY from the environment,

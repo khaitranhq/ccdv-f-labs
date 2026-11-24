@@ -2,7 +2,6 @@
 name = "ccdv-f-labs"
 version = "0.1.0"
 description = "Add your description here"
-readme = "README.md"
 authors = [
     { name = "Khai Tran", email = "khaitran.lewis@gmail.com" }
 ]
