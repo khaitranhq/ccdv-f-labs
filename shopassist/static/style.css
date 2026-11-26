@@ -1,0 +1,23 @@
+  :root { --bg:#1e1e1e; --panel:#252526; --ink:#e6e9ee; --muted:#8b949e; --accent:#d97757; --line:#3a3f47; --user:#2d3139; }
+  html,body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.4 -apple-system, "Segoe UI", sans-serif; height:100%; }
+  .wrap { display:flex; flex-direction:column; height:100%; box-sizing:border-box; padding:10px 12px; gap:8px; }
+  h1 { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin:0; font-weight:600; }
+  .chat { flex:1; min-height:120px; overflow:auto; display:flex; flex-direction:column; gap:6px; }
+  .msg { max-width:88%; padding:7px 10px; border-radius:10px; background:var(--panel); border:1px solid var(--line); }
+  .msg.user { align-self:flex-end; background:var(--user); }
+  .msg small { display:block; color:var(--muted); font-size:11px; margin-top:3px; }
+  form { display:flex; gap:6px; }
+  input { flex:1; background:var(--panel); border:1px solid var(--line); color:var(--ink); border-radius:8px; padding:8px 10px; font:inherit; outline:none; }
+  input:focus { border-color:var(--accent); }
+  button { background:var(--accent); color:#fff; border:0; border-radius:8px; padding:8px 14px; font:inherit; font-weight:600; }
+  .trace { display:flex; align-items:center; gap:0; padding-top:6px; border-top:1px solid var(--line); }
+  .node { flex:1; background:var(--panel); border:2px solid var(--line); border-radius:8px; padding:4px 4px; text-align:center; transition:border-color .25s; white-space:nowrap; overflow:hidden; }
+  .node.on { border-color:var(--accent); }
+  .node b { display:block; font-size:11.5px; } .node small { color:var(--muted); font-size:10px; }
+  .link { position:relative; width:34px; flex:none; height:2px; background:var(--line); }
+  .dot { position:absolute; top:-5px; left:-6px; width:12px; height:12px; border-radius:50%; background:var(--accent); opacity:0; }
+  .dot.back { background:#e6e9ee; }
+  .dot.go { animation:go .9s ease-in-out forwards; } .dot.ret { animation:ret .9s ease-in-out forwards; }
+  @keyframes go { from{left:-6px;opacity:1} to{left:28px;opacity:1} } @keyframes ret { from{left:28px;opacity:1} to{left:-6px;opacity:1} }
+  .lab { position:absolute; top:-22px; left:50%; transform:translateX(-50%); font:10.5px/1 ui-monospace, Menlo, monospace; color:var(--ink); background:#2d3139; padding:3px 6px; border-radius:5px; opacity:0; white-space:nowrap; transition:opacity .2s; }
+  .lab.show { opacity:1; }

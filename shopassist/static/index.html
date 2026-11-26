@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>ShopAssist chat</title>
+<link rel="stylesheet" href="style.css">
+<div class="wrap">
+  <h1>ShopAssist · customer chat</h1>
+  <div class="chat" id="chat"></div>
+  <form id="f"><input id="box" placeholder="Type a message…" autocomplete="off"><button>Send</button></form>
+  <div class="trace">
+    <div class="node" id="n-browser"><b>Browser</b><small>this page</small></div>
+    <div class="link"><div class="dot" id="d1"></div><div class="lab" id="t1"></div></div>
+    <div class="node" id="n-server"><b>Our server</b><small>app.py</small></div>
+    <div class="link"><div class="dot" id="d2"></div><div class="lab" id="t2"></div></div>
+    <div class="node" id="n-claude"><b>Claude API</b><small>the model</small></div>
+  </div>
+</div>
+<script src="app.js"></script>
